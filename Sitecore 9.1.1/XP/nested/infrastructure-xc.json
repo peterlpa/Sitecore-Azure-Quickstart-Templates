@@ -68,7 +68,7 @@
     },
     "sitecoreSKU": {
       "type": "string",
-      "allowedValues": [ "Extra Small", "Small", "Medium", "Large", "Extra Large" ],
+      "allowedValues": [ "UATSIT", "Extra Small", "Small", "Medium", "Large", "Extra Large" ],
       "defaultValue": "Extra Small",
       "metadata": {
         "description": "Sitecore SKU controls the sizes and service levels of the provisioned resources"
@@ -143,6 +143,49 @@
     "skuMap": {
       "type": "secureObject",
       "defaultValue": {
+        "UATSIT": {
+          "xcBasicHostingPlan": {
+            "SkuName": "S1",
+            "SkuCapacity": 1
+          },
+          "xcBasicHostingPlanIsolated": {
+            "SkuName": "I1",
+            "SkuCapacity": 1
+          },
+          "xcResourceIntensiveHostingPlan": {
+            "SkuName": "S1",
+            "SkuCapacity": 1
+          },
+          "xcResourceIntensiveHostingPlanIsolated": {
+            "SkuName": "I1",
+            "SkuCapacity": 1
+          },
+          "refDataSqlDatabase": {
+            "Edition": "Standard",
+            "MaxSize": "268435456000",
+            "ServiceObjectiveLevel": "S0"
+          },
+          "shardMapManagerSqlDatabase": {
+            "Edition": "Standard",
+            "MaxSize": "268435456000",
+            "ServiceObjectiveLevel": "S0"
+          },
+          "xcShard0SqlDatabase": {
+            "Edition": "Standard",
+            "MaxSize": "268435456000",
+            "ServiceObjectiveLevel": "S0"
+          },
+          "xcShard1SqlDatabase": {
+            "Edition": "Standard",
+            "MaxSize": "268435456000",
+            "ServiceObjectiveLevel": "S0"
+          },
+          "messagingSqlDatabase": {
+            "Edition": "Standard",
+            "MaxSize": "268435456000",
+            "ServiceObjectiveLevel": "S0"
+          }
+        },
         "Extra Small": {
           "xcBasicHostingPlan": {
             "SkuName": "S1",
